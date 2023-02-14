@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yellow: "#FECC02",
+                        black: "#131313",
+                        gray: "#4E4E4E",
+                    },
+                    fontFamily: {
+                        bebas: ['Bebas Neue', 'cursive'],
+                        mont: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <title>Discount Card</title>
+</head>
+
+<body class="bg-gradient-to-t from-slate-900 via-slate-600 
+to-slate-900 ">
+
+
+    <section>
+        <div
+            class="w-full max-w-sm border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto mt-6 mb-6 bg-slate-600 text-slate-300">
+            <a href="#">
+                <img class="ml-14 p-8 rounded-t-lg" src="download.jpg" alt="product image" />
+            </a>
+            <div class="p-6 text-center">
+                <div class="text-center mb-3">
+                    <span class="text-3xl font-bold dark:text-white ">$1000</span>
+                </div>
+
+                <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight dark:text-white text-slate-300">Apple Watch Series 7
+                        GPS,
+                        Aluminium Case, Starlight Sport</h5>
+                </a>
+
+                
+            </div>
+
+            <div class="text-center font-semibold">
+                <p class="font-semibold">Price:</p>
+                <input class="rounded text-black" type="text" id="price"><br><br>
+                <p>Discount Code: </p>
+                <input class="rounded text-black" type="text" id="discountCode"><br><br>
+                <button class="bg-slate-400 px-4 py-1 rounded-lg text-white
+                hover:bg-slate-300 hover:text-black" onclick="calculateDiscount()">Apply</button><br><br>
+                Discounted Price: <span id="discountedPrice"></span><br><br>
+                </div>
+
+                
+        </div>
+    </section>
+
+    <script src="js/discount.js"></script>
+
+</body>
+
+</html>
